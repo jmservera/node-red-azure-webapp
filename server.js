@@ -1,5 +1,4 @@
 //jshint esversion:6
-
 var express = require("express");
 var RED=require('node-red');
 var app= express();
@@ -18,3 +17,4 @@ app.use(settings.httpNodeRoot,RED.httpNode);
  server.listen(settings.uiPort);
 console.log(`listening port:${settings.uiPort}`);
 RED.start();
+

@@ -4,11 +4,11 @@
   "description": "A webapp wrapper for running node-red in an Azure Web App",
   "main": "server.js",
   "dependencies": {
-    "node-red": "^0.16.2"
-      },
+    "node-red": "^0.16.2",
+    "npm": "^4.4.4"
+  },
   "devDependencies": {},
   "scripts": {
-    "postinstall":"cd .nodered && npm install npm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
