@@ -4,7 +4,8 @@
   "description": "A webapp wrapper for running node-red in an Azure Web App",
   "main": "server.js",
   "dependencies": {
-    "node-red": "^0.16.2"
+    "node-red": "^0.16.2",
+    "npm":"latest"
   },
   "devDependencies": {},
   "scripts": {
