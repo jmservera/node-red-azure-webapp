@@ -9,6 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "postinstall": "copy npm.cmd .nodered\\npm.cmd && cd .nodered && npm install npm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
