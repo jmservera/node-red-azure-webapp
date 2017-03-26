@@ -1,5 +1,5 @@
 module.exports = {
-    httpAdminRoot:"/admin",
+    httpAdminRoot:"/",
     httpNodeRoot: "/",
     ui: { path: "ui" },
     
