@@ -8,15 +8,15 @@ To use it just:
     ![Web sockets](./_images/websockets.png)
 
     **Figure 1** Activate Web sockets
-1. Configure the deployment options as an *External repository* pointing to https://github.com/jmservera/node-red-webapp.git
+1. Configure the deployment options as an *External repository* pointing to [https://github.com/jmservera/node-red-webapp.git](https://github.com/jmservera/node-red-webapp.git)
 
     ![External repo](./_images/externalrepo.png)
 
     **Figure 2** External Repository
 
-Open your site and wait until it everything is deployed. It will come with some nodes preinstalled:
+Open your site and wait until everything is deployed. It comes with some cool nodes preinstalled:
 
-* UI
+* UI (create an awesome ui and see it in https://yoursite/ui )
 * Azure IoT Hub
 * Cognitive Services
 * Azure Storage (Blobs & Tables)
