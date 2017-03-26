@@ -26,6 +26,6 @@ Open your site and wait until it everything is deployed. It will come with some 
 
 To secure this deployment and add an admin password edit the `settings.js` file.
 
-> It currently uses a workaround to avoid a small problem caused with `child_process.execFile`: it uses a fake npm.cmd that points to the real one. Hope it will be fixed soon.
+> This project currently uses a workaround to avoid a small problem caused with `child_process.execFile`: it uses a fake npm.cmd that points to the real one.
 
 
