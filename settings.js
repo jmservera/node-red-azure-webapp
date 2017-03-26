@@ -1,6 +1,6 @@
 module.exports = {
-    httpAdminRoot:"/",
-    httpNodeRoot: "/api",
+    httpAdminRoot:"/admin",
+    httpNodeRoot: "/",
     ui: { path: "ui" },
     
     userDir:"./.nodered/",
