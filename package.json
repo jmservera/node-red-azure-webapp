@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "copy npm_sub.cmd .nodered\\npm.cmd",
+    "postinstall": "copy npm_sub.cmd .nodered\\npm.cmd && cd .nodered && npm install node-red-contrib-ui && npm install node-red-contrib-azure-iot-hub",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
