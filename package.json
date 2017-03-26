@@ -4,12 +4,11 @@
   "description": "A webapp wrapper for running node-red in an Azure Web App",
   "main": "server.js",
   "dependencies": {
-    "node-red": "^0.16.2",
-    "npm": "^4.4.4"
+    "node-red": "^0.16.2"
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "copy npm_sub.cmd .nodered\\npm.cmd && cd .nodered && npm install node-red-contrib-ui && npm install node-red-contrib-azureiothubnode",
+    "postinstall": "copy npm.cmd .nodered\\npm.cmd && cd .nodered && npm install node-red-contrib-ui && npm install node-red-contrib-azureiothubnode",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
