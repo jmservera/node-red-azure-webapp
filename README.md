@@ -2,7 +2,8 @@
 A webapp wrapper for running node-red in an Azure Web App.
 To use it just:
 
-1. Deploy to Azure with this button: 
+1. Deploy to Azure with this button:
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjmservera%2Fnode-red-webapp%2Fmaster%2Fwebapp.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 Or...
@@ -21,7 +22,7 @@ Or...
 
 Open your site and wait until everything is deployed. It comes with some cool nodes preinstalled:
 
-* UI (create an awesome ui and see it in https://yoursite/ui )
+* Dashboard (create an awesome ui and see it in https://yoursite/ui )
 * Azure IoT Hub
 * Cognitive Services
 * Azure Storage (Blobs & Tables)
