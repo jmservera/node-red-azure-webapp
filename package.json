@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "(if not exist .nodered mkdir .nodered) && copy npm_.cmd .nodered\\npm_.cmd && cd .nodered && npm install node-red-contrib-ui node-red-contrib-azureiothubnode node-red-contrib-cognitive-services node-red-contrib-azure-blob-storage node-red-contrib-azure-table-storage node-red-contrib-azure-sql node-red-contrib-azure-documentdb && copy npm_.cmd npm.cmd /y && cd .. && copy npm_.cmd npm.cmd /y",
+    "postinstall": "(if not exist .nodered mkdir .nodered) && copy npm_.cmd .nodered\\npm_.cmd && cd .nodered && npm install node-red-dashboard node-red-contrib-azureiothubnode node-red-contrib-cognitive-services node-red-contrib-azure-blob-storage node-red-contrib-azure-table-storage node-red-contrib-azure-sql node-red-contrib-azure-documentdb && copy npm_.cmd npm.cmd /y && cd .. && copy npm_.cmd npm.cmd /y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

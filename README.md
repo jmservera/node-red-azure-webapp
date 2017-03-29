@@ -2,6 +2,11 @@
 A webapp wrapper for running node-red in an Azure Web App.
 To use it just:
 
+1. Deploy to Azure with this button: 
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjmservera%2Fnode-red-webapp%2Fmaster%2Fwebapp.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+
+Or...
+
 1. Create an Azure Web App
 1. Open the settings and activate **Web sockets**
 
