@@ -32,18 +32,8 @@
       ],
       "defaultValue": "F1",
       "metadata": {
-        "description": "The pricing tier for the hosting plan."
+        "description": "The pricing tier for the hosting plan. For any tier >=B1 Always on will be activated."
       }
-    },
-    "alwaysOn":{
-        "type":"string",
-        "allowedValues": [
-            "true","false"
-        ],
-        "defaultValue": "true",
-        "metadata": {
-            "description":"Sets Always On setting in the Web App (only valid for other than F1). Recommended value: true, to avoid Node-RED to stop when nobody is using it."
-        }
     },
     "workerSize": {
       "type": "string",
@@ -75,17 +65,17 @@
   "variables":{
     "alwaysOnValue":{     
       "F1":"false",
-      "D1":"[parameters('alwaysOn')]",
-      "B1":"[parameters('alwaysOn')]",
-      "B2":"[parameters('alwaysOn')]",
-      "B3":"[parameters('alwaysOn')]",
-      "S1":"[parameters('alwaysOn')]",
-      "S2":"[parameters('alwaysOn')]",
-      "S3":"[parameters('alwaysOn')]",
-      "P1":"[parameters('alwaysOn')]",
-      "P2":"[parameters('alwaysOn')]",
-      "P3":"[parameters('alwaysOn')]",
-      "P4":"[parameters('alwaysOn')]"
+      "D1":"false",
+      "B1":"true",
+      "B2":"true",
+      "B3":"true",
+      "S1":"true",
+      "S2":"true",
+      "S3":"true",
+      "P1":"true",
+      "P2":"true",
+      "P3":"true",
+      "P4":"true"
     }
   },
   "resources": [
