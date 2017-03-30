@@ -35,6 +35,16 @@
         "description": "The pricing tier for the hosting plan."
       }
     },
+    "alwaysOn":{
+        "type":"string",
+        "allowedValues": [
+            "true","false"
+        ],
+        "defaultValue": "true",
+        "metadata": {
+            "description":"Sets Always On setting in the Web App. Recommended value: true, to avoid Node-RED to stop when nobody is using it."
+        }
+    }
     "workerSize": {
       "type": "string",
       "allowedValues": [
@@ -94,7 +104,8 @@
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
-          "webSocketsEnabled": true
+          "webSocketsEnabled": true,
+          "alwaysOn":"[parameters('alwaysOn')]"
         }
       },
       "resources": [
