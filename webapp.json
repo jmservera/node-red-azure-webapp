@@ -42,9 +42,9 @@
         ],
         "defaultValue": "true",
         "metadata": {
-            "description":"Sets Always On setting in the Web App. Recommended value: true, to avoid Node-RED to stop when nobody is using it."
+            "description":"Sets Always On setting in the Web App (only valid for other than F1). Recommended value: true, to avoid Node-RED to stop when nobody is using it."
         }
-    }
+    },
     "workerSize": {
       "type": "string",
       "allowedValues": [
@@ -70,6 +70,22 @@
       "metadata": {
         "description": "The branch of the GitHub repository to use."
       }
+    }
+  },
+  "variables":{
+    "alwaysOnValue":{     
+     "F1":"false",
+     "D1":"[parameters('alwaysOn')]",
+        "B1":"[parameters('alwaysOn')]",
+        "B2":"[parameters('alwaysOn')]",
+        "B3":"[parameters('alwaysOn')]",
+        "S1":"[parameters('alwaysOn')]",
+        "S2":"[parameters('alwaysOn')]",
+        "S3":"[parameters('alwaysOn')]",
+        "P1":"[parameters('alwaysOn')]",
+        "P2":"[parameters('alwaysOn')]",
+        "P3":"[parameters('alwaysOn')]",
+        "P4":"[parameters('alwaysOn')]"
     }
   },
   "resources": [
@@ -105,7 +121,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "alwaysOn":"[parameters('alwaysOn')]"
+          "alwaysOn":"[variables('alwaysOnValue')[parameters('sku')]]"
         }
       },
       "resources": [
