@@ -142,14 +142,14 @@
             "httpLogs": {
               "fileSystem": {
                 "retentionInMb": 40,
-                "enabled": true
+                "enabled": false
               }
             },
             "failedRequestsTracing": {
-              "enabled": true
+              "enabled": false
             },
             "detailedErrorMessages": {
-              "enabled": true
+              "enabled": false
             }
           }
         }
