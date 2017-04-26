@@ -1,4 +1,4 @@
-# node-red-webapp
+# node-red-azure-webapp
 A webapp wrapper for running node-red in an Azure Web App.
 To use it just:
 
