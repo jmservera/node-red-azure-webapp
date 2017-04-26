@@ -8,12 +8,6 @@
         "description": "The name of the web app that you wish to create."
       }
     },
-    "hostingPlanName": {
-      "type": "string",
-      "metadata": {
-        "description": "The name of the App Service plan to use for hosting the web app."
-      }
-    },
     "sku": {
       "type": "string",
       "allowedValues": [
@@ -62,26 +56,28 @@
       }
     }
   },
-  "variables":{
-    "alwaysOnValue":{     
-      "F1":"false",
-      "D1":"false",
-      "B1":"true",
-      "B2":"true",
-      "B3":"true",
-      "S1":"true",
-      "S2":"true",
-      "S3":"true",
-      "P1":"true",
-      "P2":"true",
-      "P3":"true",
-      "P4":"true"
-    }
+  "variables": {
+    "alwaysOnValue": {
+      "F1": "false",
+      "D1": "false",
+      "B1": "true",
+      "B2": "true",
+      "B3": "true",
+      "S1": "true",
+      "S2": "true",
+      "S3": "true",
+      "P1": "true",
+      "P2": "true",
+      "P3": "true",
+      "P4": "true"
+    },
+    "hostingPlanName": "[concat(parameters('siteName'),'Hosting')]"
+
   },
   "resources": [
     {
       "apiVersion": "2015-08-01",
-      "name": "[parameters('hostingPlanName')]",
+      "name": "[variables('hostingPlanName')]",
       "tags": {
         "displayName": "hosting"
       },
@@ -92,26 +88,25 @@
         "capacity": "[parameters('workerSize')]"
       },
       "properties": {
-        "name": "[parameters('hostingPlanName')]"
+        "name": "[variables('hostingPlanName')]"
       }
     },
     {
       "apiVersion": "2015-08-01",
       "name": "[parameters('siteName')]",
-      "tags":
-      {
+      "tags": {
         "displayName": "site"
       },
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
       ],
       "properties": {
-        "serverFarmId": "[parameters('hostingPlanName')]",
+        "serverFarmId": "[variables('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "alwaysOn":"[variables('alwaysOnValue')[parameters('sku')]]"
+          "alwaysOn": "[variables('alwaysOnValue')[parameters('sku')]]"
         }
       },
       "resources": [
@@ -126,6 +121,36 @@
             "RepoUrl": "[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
             "IsManualIntegration": true
+          }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "name": "logs",
+          "type": "config",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+          ],
+          "tags": {
+            "displayName": "Logs"
+          },
+          "properties": {
+            "applicationLogs": {
+              "fileSystem": {
+                "level": "Verbose"
+              }
+            },
+            "httpLogs": {
+              "fileSystem": {
+                "retentionInMb": 40,
+                "enabled": true
+              }
+            },
+            "failedRequestsTracing": {
+              "enabled": true
+            },
+            "detailedErrorMessages": {
+              "enabled": true
+            }
           }
         }
       ]
