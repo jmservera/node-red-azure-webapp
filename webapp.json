@@ -43,7 +43,7 @@
     },
     "repoURL": {
       "type": "string",
-      "defaultValue": "https://github.com/jmservera/node-red-webapp.git",
+      "defaultValue": "https://github.com/jmservera/node-red-azure-webapp.git",
       "metadata": {
         "description": "The URL for the GitHub repository that contains the project to deploy."
       }
