@@ -4,7 +4,7 @@ To use it just:
 
 1. Deploy to Azure with this button:
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjmservera%2Fnode-red-webapp%2Fmaster%2Fwebapp.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjmservera%2Fnode-red-azure-webapp%2Fmaster%2Fwebapp.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 Or...
 
@@ -14,7 +14,7 @@ Or...
     ![Web sockets](./_images/websockets.png)
 
     **Figure 1** Activate Web sockets
-1. Configure the deployment options as an *External repository* pointing to [https://github.com/jmservera/node-red-webapp.git](https://github.com/jmservera/node-red-webapp.git)
+1. Configure the deployment options as an *External repository* pointing to [https://github.com/jmservera/node-red-azure-webapp.git](https://github.com/jmservera/node-red-azure-webapp.git)
 
     ![External repo](./_images/externalrepo.png)
 
