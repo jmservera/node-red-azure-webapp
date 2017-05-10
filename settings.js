@@ -1,9 +1,9 @@
 module.exports = {
     httpAdminRoot:"/",
-    httpNodeRoot: "/",
+    httpNodeRoot: "/api",
     ui: { path: "ui" },
     
-    userDir:"./.nodered/",
+    userDir:"/home/nodered/.node-red/",
     // the tcp port that the Node-RED web server is listening on
     uiPort: process.env.PORT || 8000,
 
