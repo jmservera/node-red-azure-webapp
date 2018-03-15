@@ -189,6 +189,15 @@ module.exports = {
             // Whether or not to include audit events in the log output
             audit: false
         }
-    }    
+    },
+    swagger: {
+        "template": {
+          "swagger": "2.0",
+          "info": {
+            "title": "Node-RED in Azure API",
+            "version": "0.0.1"
+          }
+        }
+      }
 
 };
