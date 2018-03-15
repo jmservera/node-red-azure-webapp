@@ -54,13 +54,6 @@
       "metadata": {
         "description": "The branch of the GitHub repository to use."
       }
-    },
-    "nodeVersion":{
-      "type":"string",
-      "defaultValue": "8.9.4",
-      "metadata": {
-        "description":"The Node version you want, it must exist in the App Service"
-      }
     }
   },
   "variables": {
@@ -160,18 +153,7 @@
               "enabled": false
             }
           }
-        },
-        {
-          "apiVersion": "2015-08-01",
-          "name": "appsettings",
-          "type": "config",
-          "dependsOn": [
-            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]"
-          ],
-          "properties": {
-            "WEBSITE_NODE_DEFAULT_VERSION":"[parameters('nodeVersion')]"
-          }
-        }
+        }        
       ]
     }    
   ]
