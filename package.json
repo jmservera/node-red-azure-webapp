@@ -1,6 +1,6 @@
 {
   "name": "node-red-webapp",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A webapp wrapper for running node-red in an Azure Web App",
   "main": "server.js",
   "dependencies": {
@@ -24,8 +24,5 @@
   "bugs": {
     "url": "https://github.com/jmservera/node-red-azure-webapp/issues"
   },
-  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme",
-  "engines": {
-    "node":"8.9.4"
-  }
+  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme"
 }

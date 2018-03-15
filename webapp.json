@@ -100,7 +100,7 @@
       "type": "Microsoft.Web/sites",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]"        
       ],
       "properties": {
         "serverFarmId": "[variables('hostingPlanName')]",
@@ -116,8 +116,7 @@
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
-          ],
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"          ],
           "properties": {
             "RepoUrl": "[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
@@ -129,8 +128,7 @@
           "name": "logs",
           "type": "config",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
-          ],
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"          ],
           "tags": {
             "displayName": "Logs"
           },
@@ -153,7 +151,19 @@
               "enabled": false
             }
           }
-        }        
+        },
+        {
+          "name": "appsettings",
+          "type": "config",
+          "apiVersion": "2016-08-01",
+          "dependsOn": [
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]"
+          ],
+          "properties": {
+            "WEBSITE_NODE_DEFAULT_VERSION": "8.9.4",
+            "DeploymentVersion":"1.0.0"
+          }
+        }
       ]
     }    
   ]
