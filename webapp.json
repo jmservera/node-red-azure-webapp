@@ -54,6 +54,13 @@
       "metadata": {
         "description": "The branch of the GitHub repository to use."
       }
+    },
+    "nodeJsVersion":{
+      "type": "string",
+      "defaultValue": "8.9.4",
+      "metadata": {
+        "description": "Nodejs version, make sure that the App Service supports the version you set here."
+      }
     }
   },
   "variables": {
@@ -116,7 +123,8 @@
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"          ],
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+          ],
           "properties": {
             "RepoUrl": "[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
@@ -124,11 +132,27 @@
           }
         },
         {
+          "name": "appsettings",
+          "type": "config",
+          "apiVersion": "2015-08-01",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites/', parameters('siteName'))]",
+            "[concat('Microsoft.Web/Sites/', parameters('siteName'),'/sourcecontrols/web')]"
+          ],
+          "tags": {
+            "displayName": "AppSettings"
+          },
+          "properties": {
+            "WEBSITE_NODE_DEFAULT_VERSION": "[parameters('nodeJsVersion')]"
+          }
+        },
+        {
           "apiVersion": "2015-08-01",
           "name": "logs",
           "type": "config",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"          ],
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+          ],
           "tags": {
             "displayName": "Logs"
           },
@@ -150,18 +174,6 @@
             "detailedErrorMessages": {
               "enabled": false
             }
-          }
-        },
-        {
-          "name": "appsettings",
-          "type": "config",
-          "apiVersion": "2016-08-01",
-          "dependsOn": [
-            "[concat('Microsoft.Web/Sites/', parameters('siteName'))]"
-          ],
-          "properties": {
-            "WEBSITE_NODE_DEFAULT_VERSION": "8.9.4",
-            "DeploymentVersion":"1.0.0"
           }
         }
       ]
