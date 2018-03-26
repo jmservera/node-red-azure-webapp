@@ -20,7 +20,23 @@ Or...
 
     **Figure 2** External Repository
 
-Open your site and wait until everything is deployed. It comes with some cool nodes preinstalled:
+> This project currently uses a workaround to avoid a small problem caused with `child_process.execFile`: it uses a fake npm.cmd that points to the real one.
+
+## Usage
+
+Wait until everything is deployed before opening the website, during the deployment a script is executed to download this repo and install all the needed modules. If you see this screen just wait about 30 seconds to let the Node-RED app start:
+
+![Not Started Site](./_images/notstarted.png)
+
+**Figure 3** Not Started Site
+
+You can see the live log in the Azure Portal, in the *Log stream* tab:
+
+![Application logs stream](./_images/logstream.png)
+
+**Figure 4** Application logs stream
+
+It comes with some cool nodes preinstalled:
 
 * Dashboard (create an awesome ui and see it in https://yoursite/ui )
 * Azure IoT Hub
@@ -28,10 +44,23 @@ Open your site and wait until everything is deployed. It comes with some cool no
 * Azure Storage (Blobs & Tables)
 * DocumentDB
 * Azure SQL
+* Swagger node
 
+## Securing your deployment
 
 To secure this deployment and add an admin password edit the `settings.js` file.
 
-> This project currently uses a workaround to avoid a small problem caused with `child_process.execFile`: it uses a fake npm.cmd that points to the real one.
+## Version History
 
+* v0.0.1
+    * First test with basic nodes
+* v0.0.2
+    * Deploy to Azure Button
+    * Add cognitive services
+* v0.0.3
+    * Update Node-Red version to 0.18.4
+* v1.0.0
+    * Update Nodejs to 8.9.4
+    * Make Nodejs version configurable
+    * Add Swagger Node
 
