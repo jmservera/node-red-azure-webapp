@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/jmservera/node-red-azure-webapp/issues"
   },
-  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme"
+  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme",
+  "engines": {"node":">=12.15.0", "npm":">=6.13.4"}
 }
