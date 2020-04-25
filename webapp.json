@@ -54,13 +54,6 @@
       "metadata": {
         "description": "The branch of the GitHub repository to use."
       }
-    },
-    "nodeJsVersion":{
-      "type": "string",
-      "defaultValue": "12.15.0",
-      "metadata": {
-        "description": "Nodejs version, make sure that the App Service supports the version you set here."
-      }
     }
   },
   "variables": {
@@ -129,21 +122,6 @@
             "RepoUrl": "[parameters('repoURL')]",
             "branch": "[parameters('branch')]",
             "IsManualIntegration": true
-          }
-        },
-        {
-          "name": "appsettings",
-          "type": "config",
-          "apiVersion": "2015-08-01",
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites/', parameters('siteName'))]",
-            "[concat('Microsoft.Web/Sites/', parameters('siteName'),'/sourcecontrols/web')]"
-          ],
-          "tags": {
-            "displayName": "AppSettings"
-          },
-          "properties": {
-            "WEBSITE_NODE_DEFAULT_VERSION": "[parameters('nodeJsVersion')]"
           }
         },
         {
