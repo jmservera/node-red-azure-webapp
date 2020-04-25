@@ -53,14 +53,21 @@ To secure this deployment and add an admin password edit the `settings.js` file.
 ## Version History
 
 * v0.0.1
-    * First test with basic nodes
+  * First test with basic nodes
 * v0.0.2
-    * Deploy to Azure Button
-    * Add cognitive services
+  * Deploy to Azure Button
+  * Add cognitive services
 * v0.0.3
-    * Update Node-Red version to 0.18.4
+  * Update Node-Red version to 0.18.4
 * v1.0.0
-    * Update Nodejs to 8.9.4
-    * Make Nodejs version configurable
-    * Add Swagger Node
-
+  * Update Nodejs to 8.9.4
+  * Make Nodejs version configurable
+  * Add Swagger Node
+* v2.0.0-beta
+  * Update Nodejs to 12
+  * Update Node-red to 1.0.6
+  * Update azureiothubnode to 0.5.2
+  * Update cognitive-services 0.5.5
+  * Update dashboard 2.21.0
+  * Update node-swagger 0.1.9
+  
