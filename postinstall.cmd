@@ -1,5 +1,3 @@
-echo "Windows"
-exit 0
 (if not exist \home mkdir \home)
 (if not exist \home\nodered mkdir \home\nodered)
 (if not exist \home\nodered\.node-red mkdir \home\nodered\.node-red)
