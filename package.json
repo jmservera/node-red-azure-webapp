@@ -4,16 +4,16 @@
   "description": "A webapp wrapper for running node-red in an Azure Web App",
   "main": "server.js",
   "dependencies": {
-    "node-red": "^0.18.4",
+    "node-red": "^1.0.6",
     "node-red-contrib-azure-blob-storage": "^0.4.0",
     "node-red-contrib-azure-documentdb": "0.0.3",
     "node-red-contrib-azure-sql": "^0.1.1",
     "node-red-contrib-azure-table-storage": "^0.1.4",
     "node-red-contrib-azureiotc2d": "0.0.9",
-    "node-red-contrib-azureiothubnode": "^0.3.1",
-    "node-red-contrib-cognitive-services": "^0.5.3",
-    "node-red-dashboard": "^2.9.6",
-    "node-red-node-swagger": "^0.1.8"
+    "node-red-contrib-azureiothubnode": "^0.5.2",
+    "node-red-contrib-cognitive-services": "^0.5.5",
+    "node-red-dashboard": "^2.21.0",
+    "node-red-node-swagger": "^0.1.9"
   },
   "devDependencies": {},
   "scripts": {
@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/jmservera/node-red-azure-webapp/issues"
   },
-  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme"
+  "homepage": "https://github.com/jmservera/node-red-azure-webapp#readme",
+  "engines": {"node":">=12.15.0", "npm":">=6.13.4"}
 }

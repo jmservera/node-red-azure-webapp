@@ -190,6 +190,11 @@ module.exports = {
             audit: false
         }
     },
+    editorTheme: {
+      projects:{
+        enabled: true
+      }
+    },
     swagger: {
         "template": {
           "swagger": "2.0",

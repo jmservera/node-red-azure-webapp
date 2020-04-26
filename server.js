@@ -1,3 +1,5 @@
+// add Git as suggested in https://github.com/jmservera/node-red-azure-webapp/issues/7
+process.env.Path = 'D:\\Program Files\\Git\\cmd;D:\\Program Files\\Git\\usr\\bin;' + process.env.Path;
 //jshint esversion:6
 var express = require("express");
 var RED=require('node-red');
