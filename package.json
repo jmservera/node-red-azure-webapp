@@ -12,7 +12,7 @@
     "node-red-contrib-azureiotc2d": "0.0.9",
     "node-red-contrib-azureiothubnode": "^0.5.2",
     "node-red-contrib-cognitive-services": "^0.5.5",
-    "node-red-dashboard": "^2.21.0",
+    "node-red-dashboard": "^2.26.2",
     "node-red-node-swagger": "^0.1.9"
   },
   "devDependencies": {},
